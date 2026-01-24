@@ -412,7 +412,7 @@ function Example() {
 ### JSX vs HTML Differences
 
 | HTML | JSX | Reason |
-|------|-----|--------|
+| ------ | ----- | -------- |
 | `class` | `className` | "class" is JS keyword |
 | `for` | `htmlFor` | "for" is JS keyword |
 | `onclick` | `onClick` | React uses camelCase |
