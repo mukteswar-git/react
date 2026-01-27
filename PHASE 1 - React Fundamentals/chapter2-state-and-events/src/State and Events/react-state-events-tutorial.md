@@ -426,7 +426,7 @@ function UncontrolledInput() {
 }
 ```
 
-#### When to use uncontrolled:
+#### When to use uncontrolled
 
 - File inputs (always uncontrolled)
 - Integrating with non-React code
