@@ -1,14 +1,14 @@
-import Product from "./Product";
+import Product from "./Core Concepts/1 - Component Composition/Product"
 
-function App() {
+const App = () => {
   return (
-    <div className="app">
-      <h1>Products</h1>
+    <>
+      <h2>Component Composition</h2>
       <Product />
       <Product />
       <Product />
-    </div>
-  );
+    </>
+  )
 }
 
-export default App;
+export default App
