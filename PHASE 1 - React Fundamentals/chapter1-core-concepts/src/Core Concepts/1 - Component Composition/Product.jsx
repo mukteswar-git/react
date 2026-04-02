@@ -7,9 +7,9 @@ function Product() {
   };
 
   return (
-    <div className="w-full max-w-xs p-4 sm:p-5 border rounded-2xl bg-gray-50 shadow-sm hover:shadow-md transition">
+    <div className="w-full max-w-xs p-4 sm:p-5 border-2 border-gray-600 rounded-2xl bg-gray-800 shadow-sm hover:shadow-md transition">
   
-      <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2 text-center">
+      <h3 className="text-lg sm:text-xl font-semibold text-gray-100 mb-2 text-center">
         {product.name}
       </h3>
 
@@ -23,7 +23,7 @@ function Product() {
         {product.inStock ? 'In Stock' : 'Out of Stock'}
       </p>
 
-      <button className="w-full py-2 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 active:scale-95 transition">
+      <button className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 active:scale-95 transition">
         Add to Cart
       </button>
 

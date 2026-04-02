@@ -6,11 +6,11 @@ const App = () => {
   return (
     <Layout>
 
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center text-gray-50">
         React Core Concept
       </h1>
 
-      <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-3">
+      <h2 className="text-xl sm:text-2xl text-gray-50 font-semibold mt-6 mb-3">
         Component Composition
       </h2>
 
@@ -21,7 +21,7 @@ const App = () => {
         <Product />
       </div>
 
-      <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-3">
+      <h2 className="text-xl sm:text-2xl text-gray-50 font-semibold mt-6 mb-3">
         Basic Prop Usage
       </h2>
 
