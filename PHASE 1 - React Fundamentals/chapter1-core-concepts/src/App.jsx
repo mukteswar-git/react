@@ -3,6 +3,7 @@ import Product from "./Core Concepts/1 - Component Composition/Product"
 import Greeting from "./Core Concepts/2 - Props and Prop Drilling/1 - Basic Prop"
 import Greetings from "./Core Concepts/2 - Props and Prop Drilling/2 - Props Destructuring"
 import PropsExample from "./Core Concepts/2 - Props and Prop Drilling/3 - Props Types"
+import DefaultProps from "./Core Concepts/2 - Props and Prop Drilling/4 - Default Props"
 
 const App = () => {
   return (
@@ -66,6 +67,15 @@ const App = () => {
         object={{ city: 'NYC', country: 'USA'}}
         func={() => alert('Clicked')}
       />
+
+      {/* Default Props */}
+      <h3 className="text-lg sm:text-xl text-gray-50 font-medium mt-6 mb-3">
+        Default Props
+      </h3>
+
+      <DefaultProps />
+      <DefaultProps name="Mukti"/>
+      <DefaultProps name="Mukti" age={24}/>
     </Layout>
   )
 }
