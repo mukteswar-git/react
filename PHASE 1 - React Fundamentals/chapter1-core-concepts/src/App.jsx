@@ -1,11 +1,15 @@
 import Layout from "./Layout"
+// Component Composition
 import Product from "./Core Concepts/04-component-composition/01-product"
+// Props and Prop Drilling
 import Greeting from "./Core Concepts/05-props-and-prop-drilling/01-basic-props"
 import Greetings from "./Core Concepts/05-props-and-prop-drilling/02-props-destructuring"
 import PropsExample from "./Core Concepts/05-props-and-prop-drilling/03-prop-types"
 import DefaultProps from "./Core Concepts/05-props-and-prop-drilling/04-default-props"
 import ChildrenProp from "./Core Concepts/05-props-and-prop-drilling/05-children-prop"
 import ProductList from "./Core Concepts/05-props-and-prop-drilling/06-practical-props/ProductList"
+// Rendering Lists with .map()
+import NameList from "./Core Concepts/06-rendering-list-with-map/02-basic-map"
 
 const App = () => {
   return (
@@ -95,6 +99,18 @@ const App = () => {
       </h3>
 
       <ProductList />
+
+      {/* 6. Rendering Lists with .map() */}
+      <h2 className="text-xl sm:text-2xl text-gray-50 font-semibold mt-6 mb-3">
+        6. Rendering Lists with .map()
+      </h2>
+
+      {/* Basic .map() Syntax */}
+      <h3 className="text-lg sm:text-xl text-gray-50 font-medium mt-6 mb-3">
+        Basic .map()
+      </h3>
+
+      <NameList/>
     </Layout>
   )
 }
