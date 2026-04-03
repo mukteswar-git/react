@@ -5,6 +5,7 @@ import Greetings from "./Core Concepts/2 - Props and Prop Drilling/2 - Props Des
 import PropsExample from "./Core Concepts/2 - Props and Prop Drilling/3 - Props Types"
 import DefaultProps from "./Core Concepts/2 - Props and Prop Drilling/4 - Default Props"
 import ChildrenProp from "./Core Concepts/2 - Props and Prop Drilling/5 - Children Prop"
+import ProductList from "./Core Concepts/2 - Props and Prop Drilling/6 - Practical Props 2"
 
 const App = () => {
   return (
@@ -87,6 +88,13 @@ const App = () => {
         <h2 className="font-bold text-center mb-4">Titile</h2>
         <p className="text-center">This is the content inside the card</p>
       </ChildrenProp>
+
+      {/* Practical Props Example */}
+      <h3 className="text-lg sm:text-xl text-gray-50 font-medium mt-6 mb-3">
+        Practical Props Example
+      </h3>
+
+      <ProductList />
     </Layout>
   )
 }
