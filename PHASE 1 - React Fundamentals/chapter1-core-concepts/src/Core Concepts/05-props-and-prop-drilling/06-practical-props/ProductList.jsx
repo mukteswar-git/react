@@ -1,4 +1,4 @@
-import ProductCard from "./5_6_Practical Props";
+import ProductCard from "./ProductCard";
 
 function ProductList() {
   const handleAddToCart = (productName) => {

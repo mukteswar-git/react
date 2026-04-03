@@ -1,11 +1,11 @@
 import Layout from "./Layout"
-import Product from "./Core Concepts/4_Component Composition/4_1_Product"
-import Greeting from "./Core Concepts/5_Props and Prop Drilling/5_1_Basic Prop"
-import Greetings from "./Core Concepts/5_Props and Prop Drilling/5_2_Props Destructuring"
-import PropsExample from "./Core Concepts/5_Props and Prop Drilling/5_3_Props Types"
-import DefaultProps from "./Core Concepts/5_Props and Prop Drilling/5_4_Default Props"
-import ChildrenProp from "./Core Concepts/5_Props and Prop Drilling/5_5_Children Prop"
-import ProductList from "./Core Concepts/5_Props and Prop Drilling/5_6_Practical Props_2"
+import Product from "./Core Concepts/04-component-composition/01-product"
+import Greeting from "./Core Concepts/05-props-and-prop-drilling/01-basic-props"
+import Greetings from "./Core Concepts/05-props-and-prop-drilling/02-props-destructuring"
+import PropsExample from "./Core Concepts/05-props-and-prop-drilling/03-prop-types"
+import DefaultProps from "./Core Concepts/05-props-and-prop-drilling/04-default-props"
+import ChildrenProp from "./Core Concepts/05-props-and-prop-drilling/05-children-prop"
+import ProductList from "./Core Concepts/05-props-and-prop-drilling/06-practical-props/ProductList"
 
 const App = () => {
   return (
