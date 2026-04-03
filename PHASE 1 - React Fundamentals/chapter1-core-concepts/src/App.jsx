@@ -12,6 +12,7 @@ import ProductList from "./Core Concepts/05-props-and-prop-drilling/06-practical
 import NameList from "./Core Concepts/06-rendering-list-with-map/02-basic-map"
 import UserList from "./Core Concepts/06-rendering-list-with-map/03-map-with-objects"
 import MapProductList from "./Core Concepts/06-rendering-list-with-map/04-map-with-components"
+import MapNumberedList from "./Core Concepts/06-rendering-list-with-map/05-map-with-index"
 
 const App = () => {
   return (
@@ -127,6 +128,13 @@ const App = () => {
       </h3>
 
       <MapProductList />
+
+      {/* .map() with Index */}
+      <h3 className="text-lg sm:text-xl text-gray-50 font-medium mt-6 mb-3">
+        .map() with Index
+      </h3>
+
+      <MapNumberedList />
     </Layout>
   )
 }
