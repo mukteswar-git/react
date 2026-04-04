@@ -18,6 +18,7 @@ import NestedMapCategoryList from "./Core Concepts/06-rendering-list-with-map/07
 import TodoList from "./Core Concepts/06-rendering-list-with-map/08-real-world-example"
 // Conditional Rendering
 import ConditionalGreeting from "./Core Concepts/07-conditional-rendering/01-if-else"
+import TernaryGreeting from "./Core Concepts/07-conditional-rendering/02-ternary-operator"
 
 const App = () => {
   return (
@@ -174,6 +175,14 @@ const App = () => {
 
       <ConditionalGreeting isLoggedIn={true} />
       <ConditionalGreeting isLoggedIn={false} />
+
+      {/* Method 2: Ternary Operator (Inside JSX) */}
+      <h3 className="text-lg sm:text-xl text-gray-50 font-medium mt-6 mb-3">
+        Method 2: Ternary Operator (Inside JSX)
+      </h3>
+
+      <TernaryGreeting isLoggedIn={true} />
+      <TernaryGreeting isLoggedIn={false} />
     </Layout>
   )
 }
