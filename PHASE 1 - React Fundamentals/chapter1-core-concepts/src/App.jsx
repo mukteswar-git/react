@@ -14,6 +14,7 @@ import UserList from "./Core Concepts/06-rendering-list-with-map/03-map-with-obj
 import MapProductList from "./Core Concepts/06-rendering-list-with-map/04-map-with-components"
 import MapNumberedList from "./Core Concepts/06-rendering-list-with-map/05-map-with-index"
 import FilterProductList from "./Core Concepts/06-rendering-list-with-map/06-filter-before-mapping"
+import NestedMapCategoryList from "./Core Concepts/06-rendering-list-with-map/07-nested-map"
 
 const App = () => {
   return (
@@ -143,6 +144,13 @@ const App = () => {
       </h3>
 
       <FilterProductList />
+
+      {/* Nested .map() */}
+      <h3 className="text-lg sm:text-xl text-gray-50 font-medium mt-6 mb-3">
+        Nested .map()
+      </h3>
+
+      <NestedMapCategoryList />
     </Layout>
   )
 }
