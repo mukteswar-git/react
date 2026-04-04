@@ -15,6 +15,7 @@ import MapProductList from "./Core Concepts/06-rendering-list-with-map/04-map-wi
 import MapNumberedList from "./Core Concepts/06-rendering-list-with-map/05-map-with-index"
 import FilterProductList from "./Core Concepts/06-rendering-list-with-map/06-filter-before-mapping"
 import NestedMapCategoryList from "./Core Concepts/06-rendering-list-with-map/07-nested-map"
+import TodoList from "./Core Concepts/06-rendering-list-with-map/08-real-world-example"
 
 const App = () => {
   return (
@@ -151,6 +152,13 @@ const App = () => {
       </h3>
 
       <NestedMapCategoryList />
+
+      {/* Practical Props Example */}
+      <h3 className="text-lg sm:text-xl text-gray-50 font-medium mt-6 mb-3">
+        Practical Props Example
+      </h3>
+
+      <TodoList />
     </Layout>
   )
 }
