@@ -16,6 +16,8 @@ import MapNumberedList from "./Core Concepts/06-rendering-list-with-map/05-map-w
 import FilterProductList from "./Core Concepts/06-rendering-list-with-map/06-filter-before-mapping"
 import NestedMapCategoryList from "./Core Concepts/06-rendering-list-with-map/07-nested-map"
 import TodoList from "./Core Concepts/06-rendering-list-with-map/08-real-world-example"
+// Conditional Rendering
+import ConditionalGreeting from "./Core Concepts/07-conditional-rendering/01-if-else"
 
 const App = () => {
   return (
@@ -159,6 +161,19 @@ const App = () => {
       </h3>
 
       <TodoList />
+
+      {/* 7. Conditional Rendering */}
+      <h2 className="text-xl sm:text-2xl text-gray-50 font-semibold mt-6 mb-3">
+        7. Conditional Rendering
+      </h2>
+
+      {/* Method 1: if-else (Outside JSX) */}
+      <h3 className="text-lg sm:text-xl text-gray-50 font-medium mt-6 mb-3">
+        Method 1: if-else (Outside JSX)
+      </h3>
+
+      <ConditionalGreeting isLoggedIn={true} />
+      <ConditionalGreeting isLoggedIn={false} />
     </Layout>
   )
 }
