@@ -19,6 +19,7 @@ import TodoList from "./Core Concepts/06-rendering-list-with-map/08-real-world-e
 // Conditional Rendering
 import ConditionalGreeting from "./Core Concepts/07-conditional-rendering/01-if-else"
 import TernaryGreeting from "./Core Concepts/07-conditional-rendering/02-ternary-operator"
+import LogicalNotification from "./Core Concepts/07-conditional-rendering/03-logical-and"
 
 const App = () => {
   return (
@@ -183,6 +184,14 @@ const App = () => {
 
       <TernaryGreeting isLoggedIn={true} />
       <TernaryGreeting isLoggedIn={false} />
+
+      {/* Method 3: Logical && (Show or Nothing) */}
+      <h3 className="text-lg sm:text-xl text-gray-50 font-medium mt-6 mb-3">
+        Method 3: Logical && (Show or Nothing)
+      </h3>
+
+      <LogicalNotification hasMessage={true} />
+      <LogicalNotification hasMessage={false} />
     </Layout>
   )
 }
