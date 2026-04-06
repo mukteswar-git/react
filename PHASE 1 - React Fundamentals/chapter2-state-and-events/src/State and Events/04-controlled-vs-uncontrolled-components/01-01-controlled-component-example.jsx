@@ -19,7 +19,7 @@ function ControlledExample() {
   };
 
   return (
-    <form className="pl-6 mt-4">
+    <form className="pl-6 mt-4 flex flex-col max-w-xs">
       <input
         type="email"
         value={email}

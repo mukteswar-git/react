@@ -4,6 +4,8 @@ import BasicSyntaxCounter from "./State and Events/02-usestate-hook-deep-dive/01
 import ControlledInput from "./State and Events/04-controlled-vs-uncontrolled-components/01-controlled-components"
 import ControlledExample from "./State and Events/04-controlled-vs-uncontrolled-components/01-01-controlled-component-example"
 import UncontrolledInput from "./State and Events/04-controlled-vs-uncontrolled-components/02-uncontrolled-components"
+// 5. From Handling
+import SimpleForm from "./State and Events/05-form-handling/01-simple-form"
 
 const App = () => {
   return (
@@ -39,6 +41,18 @@ const App = () => {
       </h3>
 
       <UncontrolledInput />
+
+      {/* 5. Form Handling */}
+      <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-3">
+        5. Form Handling
+      </h2>
+
+      {/* Simple Form */}
+      <h3 className="text-lg sm:text-xl font-medium ml-4 mt-4">
+        Simple Form
+      </h3>
+
+      <SimpleForm />
     </div>
   )
 }
