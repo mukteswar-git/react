@@ -2,6 +2,7 @@
 import BasicSyntaxCounter from "./State and Events/02-usestate-hook-deep-dive/01-basic-syntax"
 // 4. Controlled vs Uncontrolled Components
 import ControlledInput from "./State and Events/04-controlled-vs-uncontrolled-components/01-controlled-components"
+import ControlledExample from "./State and Events/04-controlled-vs-uncontrolled-components/01-01-controlled-component-example"
 
 const App = () => {
   return (
@@ -28,6 +29,8 @@ const App = () => {
       </h3>
 
       <ControlledInput />
+
+      <ControlledExample />
     </div>
   )
 }
