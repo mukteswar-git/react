@@ -6,6 +6,8 @@ import ControlledExample from "./State and Events/04-controlled-vs-uncontrolled-
 import UncontrolledInput from "./State and Events/04-controlled-vs-uncontrolled-components/02-uncontrolled-components"
 // 5. From Handling
 import SimpleForm from "./State and Events/05-form-handling/01-simple-form"
+// 9. Practice Exercise
+import TodoList from "./State and Events/09-practice-exercise/02-excerciese/TodoList"
 
 const App = () => {
   return (
@@ -53,6 +55,18 @@ const App = () => {
       </h3>
 
       <SimpleForm />
+
+      {/* 9. Practice Exercise */}
+      <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-3">
+        5. Form Handling
+      </h2>
+
+      {/* Exercise 2 */}
+      <h3 className="text-lg sm:text-xl font-medium ml-4 mt-4">
+        Exercise 2
+      </h3>
+
+      <TodoList />
     </div>
   )
 }
