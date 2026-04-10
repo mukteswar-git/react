@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/immutability */
+/* eslint-disable react-refresh/only-export-components */
 // Why Immutability Matters
 
 import { useState } from "react";

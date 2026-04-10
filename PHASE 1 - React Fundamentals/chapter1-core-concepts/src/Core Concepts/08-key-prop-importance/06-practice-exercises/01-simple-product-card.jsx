@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 function ProductCard() {
   const product = {
     name: 'Wireless Headphones',

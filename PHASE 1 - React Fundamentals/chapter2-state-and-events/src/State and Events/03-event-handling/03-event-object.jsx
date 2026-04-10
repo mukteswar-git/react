@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 // Event Object
 
 function EventObjectDemo() {

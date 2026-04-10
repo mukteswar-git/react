@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 // Generating Unique Keys
 
 // Option 1: Use database IDs (best)

@@ -1,3 +1,7 @@
+/* eslint-disable react-hooks/set-state-in-effect */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-refresh/only-export-components */
 // Best Practices
 
 import { useEffect, useState } from "react";
@@ -14,7 +18,7 @@ function UserProfile() {
 }
 
 // ✅ Good: Derive data from existing state
-function UserProfile() {
+function UserProfiles() {
   const [firstName, setFirstName] = useState('John');
   const [lastName, setLastName] = useState('Doe');
   
@@ -35,7 +39,7 @@ function Form() {
 }
 
 // ✅ Good: Group related state
-function Form() {
+function Forms() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -66,7 +70,7 @@ function FilteredList({ items, searchTerm }) {
 }
 
 // ✅ Good: Calculate during render
-function FilteredList({ items, searchTerm }) {
+function FilteredLists({ items, searchTerm }) {
   const filteredItems = items.filter(item => 
     item.includes(searchTerm)
   );

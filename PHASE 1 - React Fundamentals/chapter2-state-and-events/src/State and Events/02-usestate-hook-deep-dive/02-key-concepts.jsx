@@ -1,10 +1,14 @@
+/* eslint-disable no-undef */
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-refresh/only-export-components */
 // Key Concepts
 
 import { useState } from "react";
 
 // 1. State Declaration
 
-const [state, useState] = useState(initialValue);
+// const [state, useState] = useState(initialValue);
 
   // state: Current value
   // setState: Function to update state

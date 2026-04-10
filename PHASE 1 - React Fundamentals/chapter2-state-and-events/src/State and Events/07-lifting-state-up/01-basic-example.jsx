@@ -1,3 +1,6 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-refresh/only-export-components */
 // Basic Example
 
 import { useState } from "react";
@@ -37,7 +40,7 @@ function TemperatureInput({ scale, temperature, onTemperatureChange }) {
   );
 }
 
-function App() {
+function Apps() {
   const [temperature, setTemprature] = useState('');
   const [scale, setState] = useState('c');
 

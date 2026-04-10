@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 // Updating Arrays
 
 import { useState } from "react";

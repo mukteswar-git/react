@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 // Opting Out of Batching (Rare Cases)
 
 import { useState } from 'react';

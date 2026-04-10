@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 // Form with Validation
 
 import { useState } from "react";

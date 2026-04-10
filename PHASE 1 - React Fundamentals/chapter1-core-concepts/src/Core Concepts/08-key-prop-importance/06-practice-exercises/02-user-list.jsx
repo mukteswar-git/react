@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 // Exercise 2: User List with Conditional Rendering
 
 function UserList() {

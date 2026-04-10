@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 // Basic Event Handling
 
 // React uses synthetic events (cross-browser wrapper around native events).

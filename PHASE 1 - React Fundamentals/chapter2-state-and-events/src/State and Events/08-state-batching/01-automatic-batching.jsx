@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 // Automatic Batching (React 18+)
 
 import { useState } from "react";

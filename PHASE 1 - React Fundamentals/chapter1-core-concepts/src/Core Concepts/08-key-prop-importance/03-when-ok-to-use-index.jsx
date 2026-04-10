@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 // ✅ OK to use index when:
 // 1. List is static (never changes)
 // 2. Items have no IDs

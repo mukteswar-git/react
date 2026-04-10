@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 // Real-World Example: Shopping Cart
 
 import { useState } from "react";

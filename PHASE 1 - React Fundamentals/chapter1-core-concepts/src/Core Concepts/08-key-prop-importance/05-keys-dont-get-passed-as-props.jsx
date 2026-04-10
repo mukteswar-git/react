@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable react-refresh/only-export-components */
 // Keys Don't Get Passed as Props
 
 function ListItem({ id, name }) {

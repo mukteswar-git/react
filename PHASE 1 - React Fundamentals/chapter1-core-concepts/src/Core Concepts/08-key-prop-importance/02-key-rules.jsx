@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/purity */
+/* eslint-disable react-refresh/only-export-components */
 // Key Rules
 
 // Rule 1: Keys Must Be Unique Among Siblings
@@ -39,7 +41,7 @@ function BadList() {
 // Rule 2: Keys Must be Stable(Not Change)
 
 // ❌ WRONG - using Math.random()
-function BadList() {
+function BadLists() {
   const items = ['Apple', 'Banana', 'Cherry'];
 
   return (
@@ -52,7 +54,7 @@ function BadList() {
 }
 
 // ✅ CORRECT - Stable unique ID
-function GoodList() {
+function GoodLists() {
   const items = [
     { id: 'apple-1', name: 'Apple' },
     { id: 'banana-2', name: 'Banana' },

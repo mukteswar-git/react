@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 // Common Events
 
 import { useState } from "react";
