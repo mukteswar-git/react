@@ -63,3 +63,33 @@ import { useEffect, useState } from "react";
 
     return <div>{/* Display message */}</div>;
   }
+
+// 4. Async Operations (AbortController)
+
+  function UserData({ userId }) {
+    const [user, setUser] = useState(null);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+      const controller = new AbortController();
+
+      fetch(`/api/users/${userId}`, {
+        signal: controller.signal
+      })
+        .then(res => res.json())
+        .then(setUser)
+        .catch(err => {
+          if (err.name !== 'AbortError') {
+            setError(err);
+          }
+        });
+
+      // Cleanup: abort fetch if component unmounts or userId changes
+      return () => {
+        controller.abort();
+      };
+    }, [userId]);
+
+    if (error) return <div>Error: {error.message}</div>;
+    return <div>{user?.name || 'Loading...'}</div>;
+  }
