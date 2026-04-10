@@ -21,3 +21,24 @@ import { useEffect, useState } from "react";
 
     return <div>Seconds: {second}</div>
   }
+
+// 2. Event Listener
+
+  function MouseTracker() {
+    const [position, setPostion] = useState({ x: 0, y: 0 });
+
+    useEffect(() => {
+      const handleMouseMove = (e) => {
+        setPostion({ x: e.clientX, y: e.clientY });
+      };
+
+      window.addEventListener('mousemove', handleMouseMove);
+
+      // Cleanup: remove event listener
+      return () => {
+        window.removeEventListener('mousemove', handleMouseMove);
+      };
+    }, []);
+
+    return <div>Mouse: {position.x}, {position.y}</div>
+  }
