@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 /* eslint-disable react-refresh/only-export-components */
 // Common Cleanup Scenarios
 
@@ -41,4 +43,23 @@ import { useEffect, useState } from "react";
     }, []);
 
     return <div>Mouse: {position.x}, {position.y}</div>
+  }
+
+// 3. Subsicriptions
+
+  function ChatRoom({ roomId }) {
+    const [messages, setMessages] = useState([]);
+
+    useEffect(() => {
+      const subscription = chatAPI.subscribe(roomId, (message) => {
+        setMessages(msgs => [...msgs, message]);
+      });
+
+      // Cleanup: unsubscribe when roomId changes or unmount
+      return () => {
+        subscription.unsubscribe();
+      };
+    }, [roomId]);
+
+    return <div>{/* Display message */}</div>;
   }
