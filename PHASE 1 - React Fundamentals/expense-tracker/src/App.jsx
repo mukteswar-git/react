@@ -11,6 +11,8 @@ function App() {
     { id: 2, title: "Movie", amount: 300, category: "Entertainment" },
   ]);
 
+  const [filter, setFilter] = useState("All");
+
   const handleDelete = (id) => {
     setExpenses(prev => 
       prev.filter(exp => exp.id !== id)
@@ -21,14 +23,17 @@ function App() {
     setExpenses(prev => [...prev, newExpense]);
   };
 
+  const filteredExpenses = expenses.filter(exp =>
+    filter === "All" ? true : exp.category === filter
+  );
+
   return (
     <div className="max-w-2xl mx-auto p-4">
       <Header />
       <AddExpenseForm onAdd={handleAddExpense} />
-      <FilterBar />
-      <ExpenseList expenses={expenses} onDelete={handleDelete} />
+      <FilterBar filter={filter} setFilter={setFilter} />
+      <ExpenseList expenses={filteredExpenses} onDelete={handleDelete} />
       <TotalDisplay />
-      
     </div>
   )
 }
