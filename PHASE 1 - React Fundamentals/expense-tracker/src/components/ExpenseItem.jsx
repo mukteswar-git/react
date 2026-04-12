@@ -1,4 +1,4 @@
-const ExpenseItem = ({ expense }) => {
+const ExpenseItem = ({ expense, onDelete }) => {
   return (
     <div className="flex justify-between items-center bg-gray-100 p-3 rounded-lg">
       <div>
@@ -9,7 +9,10 @@ const ExpenseItem = ({ expense }) => {
       <div className="flex items-center gap-3">
         <span className="font-semibold">{expense.amount}</span>
 
-        <button className="text-red-500">
+        <button 
+          onClick={() => onDelete(expense.id)}
+          className="text-red-500"
+        >
           x
         </button>
       </div>
