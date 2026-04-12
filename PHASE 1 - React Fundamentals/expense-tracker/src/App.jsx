@@ -17,10 +17,14 @@ function App() {
     );
   };
 
+  const handleAddExpense = (newExpense) => {
+    setExpenses(prev => [...prev, newExpense]);
+  };
+
   return (
     <div className="max-w-2xl mx-auto p-4">
       <Header />
-      <AddExpenseForm />
+      <AddExpenseForm onAdd={handleAddExpense} />
       <FilterBar />
       <ExpenseList expenses={expenses} onDelete={handleDelete} />
       <TotalDisplay />
