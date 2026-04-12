@@ -1,7 +1,7 @@
-const TotalDisplay = () => {
+const TotalDisplay = ({ total }) => {
   return (
     <div className="mt-4 text-right font-bold text-lg">
-      Total: $600
+      Total: ₹{total}
     </div>
   )
 }

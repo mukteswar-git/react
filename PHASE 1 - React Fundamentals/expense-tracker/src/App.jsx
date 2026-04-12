@@ -8,7 +8,7 @@ import TotalDisplay from "./components/TotalDisplay"
 function App() {
   const [expenses, setExpenses] = useState([
     { id: 1, title: "Pizza", amount: 200, category: "Food" },
-    { id: 2, title: "Movie", amount: 300, category: "Entertainment" },
+    { id: 2, title: "Movie", amount: 300, category: "Travel" },
   ]);
 
   const [filter, setFilter] = useState("All");
@@ -27,13 +27,15 @@ function App() {
     filter === "All" ? true : exp.category === filter
   );
 
+  const total = filteredExpenses.reduce((sum, exp) => sum + exp.amount, 0);
+
   return (
     <div className="max-w-2xl mx-auto p-4">
       <Header />
       <AddExpenseForm onAdd={handleAddExpense} />
       <FilterBar filter={filter} setFilter={setFilter} />
       <ExpenseList expenses={filteredExpenses} onDelete={handleDelete} />
-      <TotalDisplay />
+      <TotalDisplay total={total} />
     </div>
   )
 }
