@@ -4,9 +4,11 @@ A simple expense tracking app built with React to Add, Delete and Filter expense
 
 ## 🚀 Live Demo
 
-[Click here to view the app]
+👉 [View Live App](https://expense-tracker-khaki-alpha.vercel.app/)
 
 ## 📸 Preview
+
+[![Preview](./public/preview.png)](https://expense-tracker-khaki-alpha.vercel.app/)
 
 ## ✨ Features
 
