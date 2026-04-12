@@ -1,12 +1,13 @@
 import ExpenseItem from "./ExpenseItem"
 
-const ExpenseList = () => {
+const ExpenseList = ({ expenses }) => {
   return (
     <div className="space-y-2">
-      {/* Map expenses here */}
-      <ExpenseItem />
-      <ExpenseItem />
-      <ExpenseItem />
+      {
+        expenses.map(exp => (
+          <ExpenseItem key={exp.id} expense={exp} />
+        ))
+      }
     </div>
   )
 }

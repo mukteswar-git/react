@@ -1,13 +1,13 @@
-const ExpenseItem = () => {
+const ExpenseItem = ({ expense }) => {
   return (
     <div className="flex justify-between items-center bg-gray-100 p-3 rounded-lg">
       <div>
-        <p className="font-semibold text-gray-800">Pizza</p>
-        <p className="text-sm text-gray-500">Food</p>
+        <p className="font-semibold text-gray-800">{expense.title}</p>
+        <p className="text-sm text-gray-500">{expense.category}</p>
       </div>
 
       <div className="flex items-center gap-3">
-        <span className="font-semibold">$200</span>
+        <span className="font-semibold">{expense.amount}</span>
 
         <button className="text-red-500">
           x
