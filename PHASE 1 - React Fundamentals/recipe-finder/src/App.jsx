@@ -1,11 +1,43 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import RecipeList from "./components/RecipeList"
 import SearchBar from "./components/SearchBar"
+import Loader from "./components/Loader"
 
 const App = () => {
   const [query, setQuery] = useState("")
   const [searchTerm, setSearchTerm] = useState("")
   const [recipes, setRecipes] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    if (!searchTerm.trim()) return
+
+    const fetchRecipes = async () => {
+      try {
+        setLoading(true)
+        setError(null)
+
+        const res = await fetch(
+          `https://api.spoonacular.com/recipes/complexSearch?query=${searchTerm}&number=12&apiKey=${import.meta.env.VITE_SPOONACULAR_KEY}`
+        )
+
+        if (!res.ok) {
+          throw new Error("API request failed")
+        }
+
+        const data = await res.json()
+        setRecipes(data.results || [])
+      } catch (err) {
+        console.error("Error fetching recipes:", err)
+        setError(err.message || "Failed to fetch recipes")
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchRecipes()
+  }, [searchTerm])
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -18,6 +50,13 @@ const App = () => {
         setQuery={setQuery}
         setSearchTerm={setSearchTerm}
       />
+
+      {loading && <Loader />}
+      {error && <p className="text-center mt-4 text-red-500">{error}</p>}
+
+      {!loading && !error && recipes.length === 0 && searchTerm && (
+        <p>No recipes found</p>
+      )}
 
       <RecipeList recipes={recipes} />
     </div>
