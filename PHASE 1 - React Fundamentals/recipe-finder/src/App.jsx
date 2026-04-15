@@ -19,7 +19,7 @@ const App = () => {
         setError(null)
 
         const res = await fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?query=${searchTerm}&number=12&apiKey=${import.meta.env.VITE_SPOONACULAR_KEY}`
+          `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`
         )
 
         if (!res.ok) {
@@ -27,7 +27,7 @@ const App = () => {
         }
 
         const data = await res.json()
-        setRecipes(data.results || [])
+        setRecipes(data.meals || [])
       } catch (err) {
         console.error("Error fetching recipes:", err)
         setError(err.message || "Failed to fetch recipes")
