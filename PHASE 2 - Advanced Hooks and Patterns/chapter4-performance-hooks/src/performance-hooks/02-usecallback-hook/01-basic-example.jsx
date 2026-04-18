@@ -42,7 +42,7 @@ const ParentComponent = () => {
   }, []); // Empty dependency array
 
   return (
-    <div>
+    <div className="ml-4 flex flex-col gap-6 max-w-md">
       <input
         value={text}
         onChange={(e) => setText(e.target.value)}
@@ -51,7 +51,7 @@ const ParentComponent = () => {
       <ChildComponent onClick={handleClick} />
       <button
         onClick={() => setCount(count + 1)}
-        className="bg-gray-600 px-2 py-1 rounded-md ml-2"
+        className="bg-gray-600 py-1 rounded-md"
       >
         Count: {count}
       </button>
@@ -62,7 +62,7 @@ const ParentComponent = () => {
 const ChildComponent = React.memo(({ onClick }) => {
   console.log("ChildComponent rendered");
   return (
-    <button onClick={onClick} className="bg-gray-600 px-2 py-1 rounded-md ml-2">
+    <button onClick={onClick} className="bg-gray-600 py-1 rounded-md">
       Click me
     </button>
   );
