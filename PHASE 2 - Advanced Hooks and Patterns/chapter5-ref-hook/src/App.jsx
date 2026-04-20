@@ -2,6 +2,7 @@ import AutoFocusInput from "./ref-hook/03-useref-for-dom-access/01-focus-managem
 import ScrollToSection from "./ref-hook/03-useref-for-dom-access/02-scroll-to-element";
 import MeasureElement from "./ref-hook/03-useref-for-dom-access/03-measuring-dom-elements";
 import VideoPlayer from "./ref-hook/03-useref-for-dom-access/04-video-player-control";
+import StateVsRef from "./ref-hook/05-ref-vs-state/01-ref-vs-state";
 
 const App = () => {
   return (
@@ -48,6 +49,16 @@ const App = () => {
           <VideoPlayer />
         </div>
       </div>
+
+      {/* 5. Difference Between Ref and State */}
+      <div>
+        <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-3">
+          5. Difference Between Ref and State
+        </h2>
+
+        <StateVsRef />
+      </div>
+
     </div>
   );
 };
