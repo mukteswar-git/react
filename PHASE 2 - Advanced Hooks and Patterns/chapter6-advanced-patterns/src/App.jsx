@@ -1,4 +1,4 @@
-import CreateComponent from "./advanced-patterns/01-custom-hook/02-basic-custom-hook";
+import CreateComponent from "./advanced-patterns/01-custom-hook/01-basic-custom-hook";
 
 const App = () => {
   return (
