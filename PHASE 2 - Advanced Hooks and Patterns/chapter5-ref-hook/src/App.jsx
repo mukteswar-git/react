@@ -3,6 +3,7 @@ import ScrollToSection from "./ref-hook/03-useref-for-dom-access/02-scroll-to-el
 import MeasureElement from "./ref-hook/03-useref-for-dom-access/03-measuring-dom-elements";
 import VideoPlayer from "./ref-hook/03-useref-for-dom-access/04-video-player-control";
 import StateVsRef from "./ref-hook/05-ref-vs-state/01-ref-vs-state";
+import Parent from "./ref-hook/07-useimperativehandle-hook/01-basic-example";
 
 const App = () => {
   return (
@@ -59,6 +60,12 @@ const App = () => {
         <StateVsRef />
       </div>
 
+      {/* 7. useImperativeHandle Hook */}
+      <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-3">
+        7. useImperativeHandle Hook
+      </h2>
+
+      <Parent />
     </div>
   );
 };
