@@ -6,7 +6,7 @@ export function useInfiniteScroll(fetchFn) {
   const [loading, setLoading] = useState(false);
 
   const loadMore = () => {
-    setPage(prev => prev + 1);
+    setPage((prev) => prev + 1);
   };
 
   useEffect(() => {
@@ -15,12 +15,12 @@ export function useInfiniteScroll(fetchFn) {
       try {
         const newData = await fetchFn(page);
 
-        setData(prev => {
+        setData((prev) => {
           const combined = [...prev, ...newData];
 
           const unique = combined.filter(
             (img, index, self) =>
-              index === self.findIndex(i => i.id === img.id)
+              index === self.findIndex((i) => i.id === img.id),
           );
 
           return unique;
@@ -33,5 +33,5 @@ export function useInfiniteScroll(fetchFn) {
     fetchData();
   }, [page, fetchFn]);
 
-  return { data, loading, loadMore }
+  return { data, loading, loadMore };
 }
