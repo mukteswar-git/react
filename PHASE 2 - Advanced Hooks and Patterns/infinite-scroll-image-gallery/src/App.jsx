@@ -1,5 +1,6 @@
 import { useCallback, useRef } from "react";
 import { useInfiniteScroll } from "./useInfiniteScroll";
+import ImageCard from "./components/ImageCard";
 
 function App() {
   const fetchImage = useCallback(async (page) => {
@@ -37,24 +38,20 @@ function App() {
       {images.map((img, index) => {
         if (index === images.length - 1) {
           return (
-            <img
+            <ImageCard
               ref={lastImageRef}
               key={img.id}
               src={img.download_url}
               alt={img.author}
-              width="200"
-              className="rounded-2xl"
             />
           );
         }
 
         return (
-          <img
+          <ImageCard
             key={img.id}
             src={img.download_url}
             alt={img.author}
-            width="200"
-            className="rounded-2xl"
           />
         );
       })}
