@@ -39,27 +39,31 @@ function App() {
   );
 
   return (
-    <div className="flex flex-wrap gap-4">
-      {images.map((img, index) => {
-        if (index === images.length - 1) {
+    <div>
+      <div className="flex flex-wrap gap-4">
+        {images.map((img, index) => {
+          if (index === images.length - 1) {
+            return (
+              <ImageCard
+                ref={lastImageRef}
+                key={img.id}
+                src={img.download_url}
+                alt={img.author}
+              />
+            );
+          }
+
           return (
             <ImageCard
-              ref={lastImageRef}
               key={img.id}
               src={img.download_url}
               alt={img.author}
             />
           );
-        }
+        })}
+      </div>
 
-        return (
-          <ImageCard
-            key={img.id}
-            src={img.download_url}
-            alt={img.author}
-          />
-        );
-      })}
+      {loading && <p className="mt-4">Loading...</p>}
     </div>
   );
 }
