@@ -1,4 +1,4 @@
-import { useCallback, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useInfiniteScroll } from "./useInfiniteScroll";
 import ImageCard from "./components/ImageCard";
 
@@ -14,6 +14,10 @@ function App() {
   const { data: images, loading, loadMore } = useInfiniteScroll(fetchImage);
 
   const observerRef = useRef();
+
+  useEffect(() => {
+    return () => observerRef.current?.disconnect();
+  }, []);
 
   const lastImageRef = useCallback(
     (node) => {
