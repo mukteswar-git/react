@@ -7,7 +7,7 @@ const ImageCard = React.memo(
         ref={ref}
         src={src}
         alt={alt}
-        className="w-full rounded-2xl mb-4 break-inside-avoid"
+        className="w-full aspect-square object-cover rounded-2xl"
         loading="lazy"
       />
     );

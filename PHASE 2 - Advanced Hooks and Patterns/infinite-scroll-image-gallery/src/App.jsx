@@ -40,7 +40,10 @@ function App() {
 
   return (
     <div>
-      <div className="columns-2 md:columns-4 gap-4 space-y-4">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mt-4 mb-6">
+        Infinite Scroll
+      </h1>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
         {images.map((img, index) => {
           if (index === images.length - 1) {
             return (
